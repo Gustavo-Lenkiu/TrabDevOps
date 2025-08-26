@@ -30,4 +30,4 @@ jobs:
             name: projetozipado.zip
 
       - name: Baixando o artefato
-        run: ls -la
+        run: ls -R
