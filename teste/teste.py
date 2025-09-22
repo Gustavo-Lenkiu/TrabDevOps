@@ -1,8 +1,9 @@
+import pytest
 from ast import PyCF_OPTIMIZED_AST
 from scr.main import *
 from unittest.mock import patch
 
-@bytes.mark.asyncio
+@pytest.mark.asyncio
 def teste_root():
     assert root()== {"message": "Hello World"}
 
