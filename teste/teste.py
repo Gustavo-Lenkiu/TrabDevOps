@@ -13,7 +13,7 @@ async def teste_funcaoteste():
         result = await funcaoteste()
     assert result == {"Teste": True, "num_aleatório" : 25000}
 
-async def teste_cadastrar_estudante(estudante: Estudante):
+async def teste_cadastrar_estudante():
     estudante_teste = Estudante(nome="Gustavo", curso="ADS", ativo=True)
     result = await cadastrar_estudante(estudante_teste)
     assert estudante_teste == result
