@@ -1,6 +1,8 @@
+from ast import PyCF_OPTIMIZED_AST
 from scr.main import *
 from unittest.mock import patch
 
+@PyCF_OPTIMIZED_AST.mark.asyncio
 def teste_root():
     assert root()== {"message": "Hello World"}
 
@@ -11,7 +13,7 @@ def teste_funcaoteste():
 
 def teste_cadastrar_estudante(estudante: Estudante):
     estudante_teste = Estudante(nome="Gustavo", curso="ADS", ativo=True)
-    assert estudante_teste == cadastrar_estudante()
+    assert estudante_teste == cadastrar_estudante(estudante_teste)
 
 def teste_atualizar_estudante_negativo():
     assert not atualizar_estudante(-1)
