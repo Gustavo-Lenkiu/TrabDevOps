@@ -2,7 +2,7 @@ from ast import PyCF_OPTIMIZED_AST
 from scr.main import *
 from unittest.mock import patch
 
-@PyCF_OPTIMIZED_AST.mark.asyncio
+@bytes.mark.asyncio
 def teste_root():
     assert root()== {"message": "Hello World"}
 
